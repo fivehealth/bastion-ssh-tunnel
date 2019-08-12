@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  bastion-ssh-tunnel:
+    build: .
+    image: skylander86/bastion-ssh-tunnel
+
+    environment:
+      BASTION_HOST: ec2-user@bastion.example.com
+      REMOTE_PORT: 5432
+      REMOTE_HOST: secret.example.com
+    #end environment
+
+    volumes:
+      - ${BASTION_SSH_KEYFILE}:/private.key:ro
+
+    ports:
+      - '127.0.0.1:9005:8000'
+#end services

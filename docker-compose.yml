@@ -2,8 +2,7 @@ version: '3'
 
 services:
   bastion-ssh-tunnel:
-    build: .
-    image: skylander86/bastion-ssh-tunnel
+    image: skylander/bastion-ssh-tunnel
 
     environment:
       BASTION_HOST: ec2-user@bastion.example.com

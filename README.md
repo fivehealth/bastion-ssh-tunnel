@@ -1,4 +1,4 @@
-# Bastrion SSH Tunnel
+# Bastion SSH Tunnel
 
 Docker image for setting up SSH port forwarding tunnel through a Bastion host.
 
